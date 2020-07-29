@@ -8,10 +8,10 @@ function Footer() {
         <img src="https://www.alura.com.br/assets/img/alura-logo-white.1570550707.svg" alt="Logo Alura" />
       </a>
       <p>
-        Orgulhosamente criado durante a
+        Orgulhosamente criado por
         {' '}
-        <a href="https://www.alura.com.br/">
-          <strong>Imersão React da Alura</strong>
+        <a href="https://www.instagram.com/braidinha/">
+          <strong>Gabriel Braida</strong>
         </a>
       </p>
     </FooterBase>
