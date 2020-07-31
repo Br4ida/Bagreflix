@@ -50,10 +50,12 @@ function CadastroCategoria() {
       <form
         onSubmit={function handleSubmit(infosDoEvento) {
           infosDoEvento.preventDefault();
-          setCategorias([
-            ...categorias,
-            values,
-          ]);
+          if (values.titulo) {
+            setCategorias([
+              ...categorias,
+              values,
+            ]);
+          }
 
           setValues(valoresIniciais);
         }}
