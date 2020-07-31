@@ -51,7 +51,6 @@ function CadastroCategoria() {
         onSubmit={function handleSubmit(infosDoEvento) {
           infosDoEvento.preventDefault();
           if (/\S/.test(values.titulo)) {
-            console.log(values.titulo);
             setCategorias([
               ...categorias,
               values,
