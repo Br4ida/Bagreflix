@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import PageDefault from '../../../components/PageDefault';
 import FormField from '../../../components/FormField';
 import Button from '../../../components/Button';
 import useForm from '../../../hooks/useForms';
+import categoriasRepository from '../../../repositories/categorias';
 
 function CadastroCategoria() {
+  const history = useHistory();
   const valoresIniciais = {
     titulo: '',
     descricao: '',
@@ -45,6 +47,14 @@ function CadastroCategoria() {
               ...categorias,
               values,
             ]);
+            categoriasRepository.create({
+              titulo: values.titulo,
+              cor: values.cor,
+            })
+              .then(() => {
+                history.push('/cadastro/video');
+                alert('Categoria Cadastrada');
+              });
           }
 
           clearForm();
